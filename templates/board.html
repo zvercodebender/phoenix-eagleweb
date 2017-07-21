@@ -1,0 +1,71 @@
+<!doctype html>
+<title>David Broker's Eagle Project</title>
+
+<table>
+  <tr>
+    <th>Firmware Version</th><td>{{ FWrev }}</td>
+  </tr>
+  <tr>
+    <th>Hardware Version</th><td>{{ HWrev }}</td>
+  </tr>
+  <tr>
+    <th>Python Module Version</th><td>{{ PMrev }}</td>
+  </tr>
+</table>
+<table>
+  <tr>
+  <th colspan="8">DO State</th>
+  </tr>
+  <tr>
+  <td>
+    {% if STATE[0] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+  <td>
+    {% if STATE[1] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+    {% if STATE[2] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+    {% if STATE[3] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+    {% if STATE[4] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+    {% if STATE[5] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  <td>
+    {% if STATE[6] == "On" %}
+       <img src="{{ url_for('static',filename="GoSmall.png") }}" alt="Start Button" style="width:62px;height:62px;">
+    {% else %}
+       <img src="{{ url_for('static',filename="StopSmall.png") }}" alt="Stop Button" style="width:62px;height:62px;">
+    {% endif %}
+  </td>
+  </tr>
+</table>
