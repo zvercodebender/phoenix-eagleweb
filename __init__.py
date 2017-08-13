@@ -1,4 +1,5 @@
-from flask import Flask
+import subprocess
+from flask import Flask, redirect, url_for
 from flask import jsonify
 from flask import render_template
 import piplates.RELAYplate as RELAY
@@ -16,17 +17,16 @@ def hello():
     app.logger.error("Hello Page")
     return "Hello World!"
 
-@app.route("/user/")
-@app.route("/user/<username>")
-def show_user_profile( username=None ):
-    app.logger.error("Hello %s Page" % username)
-    return render_template('hello.html', name=username)
-
 @app.route("/board")
 def getBoard():
     data = getBoardData()
     return jsonify( data )
 
+@app.route("/update")
+def updateCode():
+    app.logger.error("Update code from github")
+    subprocess.call(['/home/pi/src/eagleweb/updateEagleCode.sh'])
+    return redirect( url_for('index') )
 
 def getBoardData():
     brd = 0
